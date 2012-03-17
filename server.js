@@ -1,5 +1,5 @@
 var http = require('http');
-var io = require('socket.io'), 
+var io = require('socket.io').listen(15782), 
 fs = require('fs'),
 url = require('url');
 var express = require('express');
@@ -19,6 +19,7 @@ app.get("/", express.static(__dirname + '/public/'));
 
 app.listen(15782);
 
+var io = sio.listen(app);
 
 io.sockets.on('connection', function (socket) {
   
