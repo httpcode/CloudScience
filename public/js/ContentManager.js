@@ -28,7 +28,7 @@ function ContentManager(stage, width, height) {
     // public method to launch the download process
     this.StartDownload = function () {
 
-        SetDownloadParameters(this.imgPlayer, "ninja.png");//"Player.png");
+        SetDownloadParameters(this.imgPlayer, "/img/ninja.png");//"Player.png");
         
         Ticker.addListener(this);
         Ticker.setInterval(50);
