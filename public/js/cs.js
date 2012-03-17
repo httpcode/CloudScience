@@ -20,7 +20,7 @@ $(function(){
 
         //var socket = io.connect('http://cloudscience.com.au:8081');
 
-        var socket = new io.Socket(null, {port: 80, rememberTransport: false});
+        var socket = new io.Socket();
         socket.connect();
         
         socket.on('newuser', function (data) {
