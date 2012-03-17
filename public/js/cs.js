@@ -18,7 +18,10 @@ $(function(){
         var cs = new CloudScience(stage, contentManager, canvas.width, canvas.height, usersOnPage);
         cs.StartGame();
 
-        var socket = io.connect('http://cloudscience.com.au:8081');
+        //var socket = io.connect('http://cloudscience.com.au:8081');
+
+        var socket = new io.Socket(null, {port: 80, rememberTransport: false});
+        socket.connect();
         
         socket.on('newuser', function (data) {
             var user = cs.LoadUser();
