@@ -18,7 +18,7 @@ $(function(){
         var cs = new CloudScience(stage, contentManager, canvas.width, canvas.height, usersOnPage);
         cs.StartGame();
 
-        var socket = io.connect('http://ninja.learnweaver.net:8081');
+        var socket = io.connect('http://cloudscience.com.au:8081');
         
         socket.on('newuser', function (data) {
             var user = cs.LoadUser();
