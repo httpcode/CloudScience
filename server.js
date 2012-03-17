@@ -1,5 +1,5 @@
 var http = require('http');
-var io = require('socket.io').listen(8081), 
+var io = require('socket.io'), 
 fs = require('fs'),
 url = require('url');
 var express = require('express');
